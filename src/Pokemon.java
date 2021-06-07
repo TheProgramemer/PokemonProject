@@ -16,11 +16,10 @@ public class Pokemon {
     }
 
     public void sayName() {
-        System.out.println(this.name);
+        System.out.println("Pokemon");
     }
 
     public void levelUp() {
-
     }
 
     public Pokemon evolve() {
@@ -31,13 +30,16 @@ public class Pokemon {
         return this.type;
     }
 
+    public int getLevel() {
+        return this.level;
+    }
+
     public static class Builder {
-        private String name;
-        private int level;
-        private String type;
+        protected String name;
+        protected int level;
+        protected String type;
 
         public Builder() {
-
         }
 
         public Builder name(String name) {
