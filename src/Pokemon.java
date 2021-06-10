@@ -1,4 +1,4 @@
-public class Pokemon {
+public abstract class Pokemon {
     private String name;
     private int level;
     private String type;
@@ -15,15 +15,9 @@ public class Pokemon {
         this.type = type;
     }
 
-    public void sayName() {
-        System.out.println("Pokemon");
-    }
+    public abstract void sayName();
 
     public void levelUp() {
-    }
-
-    public Pokemon evolve() {
-        return new Pokemon();
     }
 
     public String getType() {
@@ -34,7 +28,7 @@ public class Pokemon {
         return this.level;
     }
 
-    public static class Builder {
+    public abstract static class Builder {
         protected String name;
         protected int level;
         protected String type;
@@ -57,8 +51,6 @@ public class Pokemon {
             return this;
         }
 
-        public Pokemon build() {
-            return new Pokemon(this.name, this.level, this.type);
-        }
+        public abstract Pokemon build();
     }
 }
