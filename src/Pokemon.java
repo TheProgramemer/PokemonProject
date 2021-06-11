@@ -1,26 +1,28 @@
 public abstract class Pokemon {
     private String name;
     private int level;
-    private String type;
+    private Types type;
 
     public Pokemon() {
-        this.name = "Wartortle";
-        this.level = 16;
-        this.type = "Water";
+        this.name = "Eevee";
+        this.level = 5;
+        this.type = Types.NORMAL;
     }
 
-    public Pokemon(String name, int level, String type) {
+    public Pokemon(String name, int level, Types type) {
         this.name = name;
         this.level = level;
         this.type = type;
     }
 
-    public abstract void sayName();
+    public void sayName() {
+        System.out.println(this.name);
+    }
 
     public void levelUp() {
     }
 
-    public String getType() {
+    public Types getType() {
         return this.type;
     }
 
@@ -31,7 +33,7 @@ public abstract class Pokemon {
     public abstract static class Builder {
         protected String name;
         protected int level;
-        protected String type;
+        protected Types type;
 
         public Builder() {
         }
@@ -46,7 +48,7 @@ public abstract class Pokemon {
             return this;
         }
 
-        public Builder type(String type) {
+        public Builder type(Types type) {
             this.type = type;
             return this;
         }

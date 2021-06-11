@@ -1,11 +1,6 @@
-public class Squirtle extends Pokemon implements Evolvable {
-    public Squirtle(String name, int level, String type) {
+public class Squirtle extends Pokemon implements LevelEvolvable {
+    public Squirtle(String name, int level, Types type) {
         super(name, level, type);
-    }
-
-    @Override
-    public void sayName() {
-        System.out.println("Squirtle");
     }
 
     @Override

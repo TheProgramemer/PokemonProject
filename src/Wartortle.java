@@ -1,11 +1,6 @@
-public class Wartortle extends Pokemon implements Evolvable {
-    public Wartortle(String name, int level, String type) {
+public class Wartortle extends Pokemon implements LevelEvolvable {
+    public Wartortle(String name, int level, Types type) {
         super(name, level, type);
-    }
-
-    @Override
-    public void sayName() {
-        System.out.println("Wartortle");
     }
 
     @Override
