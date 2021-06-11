@@ -1,3 +1,5 @@
+package Enums;
+
 public enum EvolutionStones {
     FIRE_STONE,
     THUNDER_STONE,

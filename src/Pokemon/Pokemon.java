@@ -1,10 +1,14 @@
+package Pokemon;
+
+import Enums.Types;
+
 public abstract class Pokemon {
     private String name;
     private int level;
     private Types type;
 
     public Pokemon() {
-        this.name = "Eevee";
+        this.name = "Pokemon";
         this.level = 5;
         this.type = Types.NORMAL;
     }

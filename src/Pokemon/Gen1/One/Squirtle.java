@@ -1,6 +1,12 @@
+package Pokemon.Gen1.One;
+
+import Enums.Types;
+import Evolvable.LevelEvolvable;
+import Pokemon.Pokemon;
+
 public class Squirtle extends Pokemon implements LevelEvolvable {
-    public Squirtle(String name, int level, Types type) {
-        super(name, level, type);
+    public Squirtle(int level) {
+        super("Squirtle", level, Types.WATER);
     }
 
     @Override
@@ -19,7 +25,7 @@ public class Squirtle extends Pokemon implements LevelEvolvable {
     public static class Builder extends Pokemon.Builder {
         @Override
         public Pokemon build() {
-            return new Squirtle(this.name, this.level, this.type);
+            return new Squirtle(this.level);
         }
     }
 }

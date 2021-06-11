@@ -1,6 +1,12 @@
+package Pokemon.Gen1.One;
+
+import Enums.Types;
+import Evolvable.LevelEvolvable;
+import Pokemon.Pokemon;
+
 public class Wartortle extends Pokemon implements LevelEvolvable {
-    public Wartortle(String name, int level, Types type) {
-        super(name, level, type);
+    public Wartortle(int level) {
+        super("Wartortle", level, Types.WATER);
     }
 
     @Override
@@ -19,7 +25,7 @@ public class Wartortle extends Pokemon implements LevelEvolvable {
     public static class Builder extends Pokemon.Builder {
         @Override
         public Pokemon build() {
-            return new Wartortle(this.name, this.level, this.type);
+            return new Wartortle(this.level);
         }
     }
 }
