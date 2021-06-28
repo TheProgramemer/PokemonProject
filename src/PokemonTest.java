@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,7 +24,7 @@ public class PokemonTest {
         String johtoDexLocation = "src/Pokedexes/Johto Dex.txt";
         String hoennDexLocation = "src/Pokedexes/Hoenn Dex.txt";
 
-        List<String> nationalDex = new ArrayList<>();
+        List<String> nationalDex = new LinkedList<>();
 
         List<String> regionalDex = readFile(kantoDexLocation);
         nationalDex.addAll(regionalDex);
