@@ -105,6 +105,7 @@
 356 dusclops
 357 tropius
 358 chimecho
+359 absol
 360 wynaut
 361 snorunt
 362 glalie
