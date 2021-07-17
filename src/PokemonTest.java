@@ -1,8 +1,5 @@
 import java.io.File;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class PokemonTest {
     public static List<String> readFile(String fileLocation) {
@@ -30,5 +27,18 @@ public class PokemonTest {
         nationalDex.addAll(regionalDex);
         nationalDex.addAll(readFile(johtoDexLocation));
         nationalDex.addAll(readFile(hoennDexLocation));
+
+        Stack<String> stack = new Stack<>();
+        for (int i = 0; i < 3; i++) {
+            String pokemon = nationalDex.get(i);
+            System.out.println(pokemon);
+            stack.push(pokemon);
+        }
+\
+        System.out.println(stack.peek());
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println(stack.pop());
+        }
     }
 }
