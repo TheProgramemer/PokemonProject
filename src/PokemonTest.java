@@ -27,18 +27,5 @@ public class PokemonTest {
         nationalDex.addAll(regionalDex);
         nationalDex.addAll(readFile(johtoDexLocation));
         nationalDex.addAll(readFile(hoennDexLocation));
-
-        Queue<String> queue = new ArrayDeque<>();
-        for (int i = 0; i < 3; i++) {
-            String pokemon = nationalDex.get(i);
-            System.out.println(pokemon);
-            queue.offer(pokemon);
-        }
-
-        System.out.println(queue.peek());
-
-        for (int i = 0; i < 3; i++) {
-            System.out.println(queue.poll());
-        }
     }
 }
